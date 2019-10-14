@@ -1,0 +1,42 @@
+# Start with a Deny all
+*
+
+# --- Application code
+!application/
+!application/lambdas
+!application/layers
+
+!application/lambdas/*/
+!application/layers/*/
+
+# Authorized contents in a Lambda package
+!application/lambdas/*/*.js
+!application/lambdas/*/package.json
+!application/lambdas/*/yarn.lock
+
+# Authorized contents in a Layer package
+!application/layers/*/nodejs/
+!application/layers/*/nodejs/node_modules/
+!application/layers/*/nodejs/node_modules/*.js
+
+# --- Infrastructure code
+!infrastructure/
+
+# Modules
+!infrastructure/modules/
+!infrastructure/modules/global/
+!infrastructure/modules/project/
+!infrastructure/modules/global/*/
+!infrastructure/modules/project/*/
+!infrastructure/modules/global/*/*.tf
+!infrastructure/modules/project/*/*.tf
+
+# Origins
+!infrastructure/origins/
+!infrastructure/origins/*/
+!infrastructure/origins/*/*.tf
+
+# Other files
+!.gitignore
+!LICENSE
+!README.md
