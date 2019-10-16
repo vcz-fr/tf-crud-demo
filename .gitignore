@@ -1,6 +1,10 @@
 # Start with a Deny all
 *
 
+# --- API description
+!api/
+!api/*
+
 # --- Application code
 !application/
 !application/lambdas
@@ -30,6 +34,10 @@
 !infrastructure/modules/project/*/
 !infrastructure/modules/global/*/*.tf
 !infrastructure/modules/project/*/*.tf
+
+# Module templates
+!infrastructure/modules/*/*/templates
+!infrastructure/modules/*/*/templates/*.tpl
 
 # Origins
 !infrastructure/origins/

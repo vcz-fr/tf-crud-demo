@@ -13,6 +13,4 @@ resource "aws_dynamodb_table" "table" {
           type = attribute.value.type
       }
   }
-
-  tags = merge(var.tags, {"Name": var.name})
 }

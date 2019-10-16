@@ -15,6 +15,4 @@ resource "aws_lambda_function" "lambda" {
   environment {
     variables = merge(var.environment, {"LAMBDA_NAME": var.name})
   }
-
-  tags = merge(var.tags, {"Name": var.name})
 }

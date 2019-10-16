@@ -1,11 +1,6 @@
-variable "name" {
+variable "domain" {
   type        = string
-  description = "API Gateway name"
-}
-
-variable "specification" {
-  type        = string
-  description = "API Gateway specification"
+  description = "API Gateway domain"
 }
 
 variable "lambdas" {

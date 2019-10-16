@@ -3,12 +3,12 @@ variable "name" {
   description = "DynamoDB table name"
 }
 
-variable "hash-key" {
+variable "pk" {
   type = string
   description = "Primary key. To be defined as an attribute as well."
 }
 
-variable "range-key" {
+variable "sk" {
   type = string
   description = "Secondary sort key. To be defined as an attribute as well."
   default = ""
