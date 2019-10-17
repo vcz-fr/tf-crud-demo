@@ -9,7 +9,7 @@ variable "specification" {
 }
 
 variable "lambdas" {
-  type = list(any)
+  type        = list(any)
   description = "List of Lambdas that will be called by this API Gateway"
-  default = []
+  default     = []
 }

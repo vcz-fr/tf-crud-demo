@@ -1,10 +1,10 @@
 variable "name" {
-  type = string
+  type        = string
   description = "Role name"
 }
 
 variable "policies" {
-  type = list(string)
+  type        = list(string)
   description = "List of the ARNs of the policies to assign to the role"
-  default = []
+  default     = []
 }

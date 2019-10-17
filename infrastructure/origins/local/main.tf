@@ -2,7 +2,8 @@
 # Its sole purpose is to connect modules and resources at the project level.
 
 # This main file belongs to the local *origin*.
-# An *origin* is a way to describe a root module when your project does not have one but multiple connecting to the same underlying modules and resources.
+# An *origin* is a way to describe a root module when your project does not
+# have one but multiple connecting to the same underlying modules and resources.
 
 module "glb-role" {
   source = "../../modules/project/role_function"
@@ -20,7 +21,7 @@ module "ddb" {
   source = "../../modules/project/database_nosql"
 
   name = "users"
-  pk = "uid"
+  pk   = "uid"
 
   # INFO::[Behaviour] The PK must be an attribute
   attributes = [{
@@ -32,15 +33,17 @@ module "ddb" {
 module "lay-crud" {
   source = "../../modules/project/function_dependency"
 
-  # INFO::[Convention] Packages and publishes the directory /application/layers/crud
+  # INFO::[Convention] Packages and publishes the directory
+  # /application/layers/crud
   name = "crud"
 }
 
 module "lbd-employee" {
   source = "../../modules/project/function"
 
-  # INFO::[Convention] Packages and publishes the directory /application/lambdas/employee
-  name = "employee"
+  # INFO::[Convention] Packages and publishes the directory
+  # /application/lambdas/employee
+  name           = "employee"
   execution-role = module.glb-role.arn
 
   # INFO::[Limit] Max 5 layers
@@ -56,9 +59,13 @@ module "lbd-employee" {
 module "api" {
   source = "../../modules/project/api-gateway"
 
-  # INFO::[Convention] Uses the OpenAPI 3.0 API template located in /api/employee.json
+  # INFO::[Convention] Uses the OpenAPI 3.0 API template located in
+  # /api/employee.json
   domain = "employee"
 
-  # INFO::[Convention] This defines both the Invoke authorizations between AWS API Gateway and AWS Lambda and the variables that will be passed to the template engine. These variables will be named "lbd-" followed by the name of the Lambda
+  # INFO::[Convention] This defines both the Invoke authorizations between
+  # AWS API Gateway and AWS Lambda and the variables that will be passed to the
+  # template engine. These variables will be named "lbd-" followed by the name
+  # of the Lambda function
   lambdas = [module.lbd-employee]
 }

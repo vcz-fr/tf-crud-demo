@@ -11,22 +11,35 @@ exports.handler = async (event, _) => {
 
     switch (event.httpMethod) {
         case 'GET':
-            body = CRUD.readItem({ uid: requestBody.uid });
+            body = CRUD.readItem({
+                uid: requestBody.uid
+            });
             statusCode = 200;
             break;
 
         case 'POST':
-            body = CRUD.createItem({ uid: UUIDv4(), name: requestBody.name, age: requestBody.age });
+            body = CRUD.createItem({
+                uid: UUIDv4(),
+                name: requestBody.name,
+                age: requestBody.age
+            });
             statusCode = 201;
             break;
 
         case 'PUT':
-            body = CRUD.updateItem({ uid: requestBody.uid }, { name: requestBody.name, age: requestBody.age });
+            body = CRUD.updateItem({
+                uid: requestBody.uid
+            }, {
+                name: requestBody.name,
+                age: requestBody.age
+            });
             statusCode = 200;
             break;
 
         case 'DELETE':
-            body = CRUD.deleteItem({ uid: requestBody.uid });
+            body = CRUD.deleteItem({
+                uid: requestBody.uid
+            });
             statusCode = 204;
             break;
 

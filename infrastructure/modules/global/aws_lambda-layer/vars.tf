@@ -1,14 +1,14 @@
 variable "name" {
-  type = string
+  type        = string
   description = "Layer name"
 }
 
 variable "package" {
-  type = string
+  type        = string
   description = "Package file location"
 }
 
 variable "compatible_runtimes" {
-  type = list(string)
+  type        = list(string)
   description = "List of compatible runtimes. Must not be empty."
 }

@@ -13,6 +13,6 @@ resource "aws_lambda_function" "lambda" {
   memory_size = var.max-memory
 
   environment {
-    variables = merge(var.environment, {"LAMBDA_NAME": var.name})
+    variables = merge(var.environment, { "LAMBDA_NAME" : var.name })
   }
 }

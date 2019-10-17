@@ -4,7 +4,20 @@
     "title": "Employee"
   },
   "paths": {
-    "/": {
+    "/employee": {
+      "get": {
+        "parameters": [
+          {
+            "name": "uid",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-amazon-apigateway-integration": ${lbd-employee}
+      },
       "post": {
         "parameters": [
           {
@@ -29,22 +42,6 @@
             "required": true,
             "schema": {
               "type": "integer"
-            }
-          }
-        ],
-        "x-amazon-apigateway-integration": ${lbd-employee}
-      },
-      "options": ${glob-preflight}
-    },
-    "/employee": {
-      "get": {
-        "parameters": [
-          {
-            "name": "uid",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "string"
             }
           }
         ],

@@ -1,15 +1,15 @@
 variable "name" {
-  type = string
+  type        = string
   description = "Role name"
 }
 
 variable "role_assumption" {
-  type = string
+  type        = string
   description = "Policy that grants an entity permission to assume the role"
 }
 
 variable "policies" {
-  type = list(string)
+  type        = list(string)
   description = "List of the ARNs of the policies to assign to the role"
-  default = []
+  default     = []
 }

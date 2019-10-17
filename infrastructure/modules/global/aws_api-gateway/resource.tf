@@ -21,4 +21,8 @@ resource "aws_lambda_permission" "lambda-permission" {
 resource "aws_api_gateway_deployment" "api-deployment" {
   rest_api_id = aws_api_gateway_rest_api.api.id
   stage_name  = "latest"
+
+  # Detects changes in the specification and consequently deploys the new API
+  # to the stage
+  description = "From specification: ${base64sha256(var.specification)}"
 }
