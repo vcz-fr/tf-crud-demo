@@ -44,6 +44,14 @@
 !infrastructure/origins/*/
 !infrastructure/origins/*/*.tf
 
+# Special cases
+!infrastructure/origins/moduled/dependen*/
+!infrastructure/origins/moduled/dependen*/*.tf
+
+!infrastructure/origins/large-project/modules/
+!infrastructure/origins/large-project/modules/*/
+!infrastructure/origins/large-project/modules/*/*.tf
+
 # Other files
 !.gitignore
 !LICENSE
