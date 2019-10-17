@@ -2,7 +2,7 @@
 # In our current setting, we only have one
 
 module "dep-crud" {
-  source = "../../../../modules/project/function_dependency"
+  source = "../../../../../modules/project/function_dependency"
 
   # INFO::[Convention] Packages and publishes the directory
   # /application/layers/crud

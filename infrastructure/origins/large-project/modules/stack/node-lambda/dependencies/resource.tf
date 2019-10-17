@@ -1,7 +1,7 @@
 # The following resources will be provisioned before the software is provisioned
 
 module "glb-role" {
-  source = "../../../../modules/project/role_function"
+  source = "../../../../../../modules/project/role_function"
 
   name = "Demo-FaaSPawn-LambdaExecution"
 
@@ -14,7 +14,7 @@ module "glb-role" {
 }
 
 module "db" {
-  source = "../../../../modules/project/database_nosql"
+  source = "../../../../../../modules/project/database_nosql"
 
   name = "users"
   pk   = "uid"

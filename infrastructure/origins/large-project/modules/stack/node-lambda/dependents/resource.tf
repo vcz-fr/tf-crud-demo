@@ -1,7 +1,7 @@
 # The following resources will be provisioned after the software is provisioned
 
 module "api" {
-  source = "../../../../modules/project/api-gateway"
+  source = "../../../../../../modules/project/api-gateway"
 
   # INFO::[Convention] Uses the OpenAPI 3.0 API template located in
   # /api/employee.json

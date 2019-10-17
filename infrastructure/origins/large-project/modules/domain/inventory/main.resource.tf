@@ -2,10 +2,10 @@
 # Its sole purpose is to connect modules and resources at the domain level.
 
 module "dependencies" {
-  source = "../soft-dependencies"
+  source = "../../stack/node-lambda/dependencies"
 }
 
 module "dependents" {
-  source    = "../soft-dependents"
+  source    = "../../stack/node-lambda/dependents"
   functions = local.functions
 }

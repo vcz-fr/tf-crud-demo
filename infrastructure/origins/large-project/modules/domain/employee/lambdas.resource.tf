@@ -2,11 +2,11 @@
 # In our current setting, we only have one
 
 locals {
-  functions = [module.fun-inventory]
+  functions = [module.fun-employee]
 }
 
-module "fun-inventory" {
-  source = "../../../../modules/project/function"
+module "fun-employee" {
+  source = "../../../../../modules/project/function"
 
   # INFO::[Convention] Packages and publishes the directory
   # /application/lambdas/employee

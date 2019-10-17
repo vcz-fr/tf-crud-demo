@@ -50,7 +50,10 @@
 
 !infrastructure/origins/large-project/modules/
 !infrastructure/origins/large-project/modules/*/
-!infrastructure/origins/large-project/modules/*/*.tf
+!infrastructure/origins/large-project/modules/*/*/
+!infrastructure/origins/large-project/modules/domain/*/*.tf
+!infrastructure/origins/large-project/modules/stack/*/*/
+!infrastructure/origins/large-project/modules/stack/*/*/*.tf
 
 # Other files
 !.gitignore

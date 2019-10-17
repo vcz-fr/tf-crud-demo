@@ -15,9 +15,9 @@
 # - Opening up global configuration oppurtunities.
 
 module "employee" {
-  source = "./modules/dom-employee"
+  source = "./modules/domain/employee"
 }
 
 module "inventory" {
-  source = "./modules/dom-inventory"
+  source = "./modules/domain/inventory"
 }
