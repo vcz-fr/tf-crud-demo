@@ -2,10 +2,10 @@
 # Its sole purpose is to connect modules and resources at the domain level.
 
 module "dependencies" {
-    source = "../soft-dependencies"
+  source = "../soft-dependencies"
 }
 
 module "dependents" {
-    source = "../soft-dependents"
-    functions = local.functions
+  source    = "../soft-dependents"
+  functions = local.functions
 }

@@ -1,5 +1,5 @@
 locals {
-  function = [module.fun-employee]
+  functions = [module.fun-employee]
 }
 
 # You would describe your collection of Functions in this file

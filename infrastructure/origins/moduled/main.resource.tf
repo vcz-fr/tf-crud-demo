@@ -11,10 +11,10 @@
 # the software stack like the API.
 
 module "dependencies" {
-    source = "./dependencies"
+  source = "./dependencies"
 }
 
 module "dependents" {
-    source = "./dependents"
-    functions = local.functions
+  source    = "./dependents"
+  functions = local.functions
 }
