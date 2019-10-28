@@ -20,7 +20,7 @@ does not provide basic features because it is meant as a demonstration.
 There was no intention of following the best practices in terms of AWS resource
 management or Terraform provisioning. Comments are limited out of the
 meaningful section of this code and the explanation can be found in the
-following [blog post (not published yet)](#).
+following [blog post](https://www.gekko.fr/en/self-service-faas-infrastructure-with-terraform/).
 
 The shortcuts taken with this example code **MUST** be wisely considered before
 applying them to your code base. In no way they are industry standards. Always
